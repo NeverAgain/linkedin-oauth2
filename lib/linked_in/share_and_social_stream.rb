@@ -88,7 +88,7 @@ module LinkedIn
     # @return [void]
     def add_share(share)
       path = "/people/~/shares"
-      defaults = {visibility: {code: "anyone"}}
+      defaults = {format: "json", visibility: {code: "anyone"}}
       post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
     end
 
